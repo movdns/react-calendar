@@ -19,7 +19,7 @@
     "copy-styles": "node ./copy-styles.js",
     "jest": "jest",
     "lint": "eslint sample/ src/ test/ --ext .jsx,.js",
-    "postinstall": "husky install",
+    "postinstall": "yarn build",
     "prepack": "yarn clean && yarn build",
     "test": "yarn lint && yarn jest"
   },
@@ -104,7 +104,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/wojtekmaj/react-calendar.git"
+    "url": "https://github.com/movdns/react-calendar.git#tileStyle_prop"
   },
   "funding": "https://github.com/wojtekmaj/react-calendar?sponsor=1",
   "packageManager": "yarn@3.1.0"

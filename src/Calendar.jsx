@@ -466,6 +466,7 @@ export default class Calendar extends Component {
       minDate,
       selectRange,
       tileClassName,
+      tileStyle,
       tileContent,
       tileDisabled,
     } = this.props;
@@ -486,6 +487,7 @@ export default class Calendar extends Component {
       onClick,
       onMouseOver: selectRange ? onMouseOver : null,
       tileClassName,
+      tileStyle,
       tileContent,
       tileDisabled,
       value,
@@ -696,6 +698,10 @@ Calendar.propTypes = {
   showNeighboringMonth: PropTypes.bool,
   showWeekNumbers: PropTypes.bool,
   tileClassName: PropTypes.oneOfType([PropTypes.func, isClassName]),
+  tileStyle: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.objectOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])),
+  ]),
   tileContent: PropTypes.oneOfType([PropTypes.func, PropTypes.node]),
   tileDisabled: PropTypes.func,
   value: isLooseValue,
